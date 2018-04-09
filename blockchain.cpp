@@ -1,4 +1,4 @@
-#include "blockchain.h"
+#include "block.h"
 #include <ctime>
 
 Block::Block(unsigned int index, unsigned char[] previousHash, time_t timestamp, Data data, unsigned char[] hash) {
