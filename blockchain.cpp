@@ -1,8 +1,9 @@
 include "block.h"
 include "sha256.h"
 
-Blockchain::calculateHash(index, previousHash, timestamp, data) {
-    //return SHA256(index + previousHash + timestamp + data).toString();
+std::string Blockchain::calculateHash(index, previousHash, timestamp, data) {
+    std::string common = index + previousHash + timestamp + data;
+    return SHA256::sha256(common);
 };
 
 int main() {
